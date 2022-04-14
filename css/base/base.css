@@ -1,6 +1,8 @@
 :root {
     --primary-color: #7c4fe0;
+    --primary-color-anti: #fff;
     --secondary-color: #f6f9fe;
+    --secondary-color-anti: #333;
 }
 
 body,
@@ -20,8 +22,10 @@ body {
 
 .bg-primary-color {
     background-color: var(--primary-color);
+    color: var(--primary-color-anti);
 }
 
 .bg-secondary-color {
     background-color: var(--secondary-color);
+    color: var(--secondary-color-anti);
 }
