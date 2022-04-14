@@ -29,3 +29,24 @@ body {
     background-color: var(--secondary-color);
     color: var(--secondary-color-anti);
 }
+
+p {
+    font-size: 17px;
+    color: #777;
+}
+.bg-primary-color p,
+.bg-secondary-color p {
+    color: inherit;
+}
+
+.section-title {
+    font-size: 36px;
+}
+
+.section-description {
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
