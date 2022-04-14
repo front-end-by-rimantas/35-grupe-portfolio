@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #7c4fe0;
+    --primary-color-anti: #fff;
+    --secondary-color: #f6f9fe;
+    --secondary-color-anti: #333;
+}
+
 body,
 body * {
     margin: 0;
@@ -11,4 +18,63 @@ body {
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
+}
+
+.bg-primary-color {
+    background-color: var(--primary-color);
+    color: var(--primary-color-anti);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-anti);
+}
+
+p {
+    font-size: 17px;
+    color: #777;
+}
+.bg-primary-color p,
+.bg-secondary-color p {
+    color: inherit;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.section-title::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--primary-color);
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+}
+.section-title.no-line::before {
+    display: none;
+}
+.section-title.title-center {
+    text-align: center;
+}
+.section-title.title-center::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-title.title-right {
+    text-align: right;
+}
+.section-title.title-right::before {
+    left: unset;
+    right: 0;
+}
+
+.section-description {
+}
+
+.center {
+    text-align: center;
 }
