@@ -29,3 +29,52 @@ body {
     background-color: var(--secondary-color);
     color: var(--secondary-color-anti);
 }
+
+p {
+    font-size: 17px;
+    color: #777;
+}
+.bg-primary-color p,
+.bg-secondary-color p {
+    color: inherit;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.section-title::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--primary-color);
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+}
+.section-title.no-line::before {
+    display: none;
+}
+.section-title.title-center {
+    text-align: center;
+}
+.section-title.title-center::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-title.title-right {
+    text-align: right;
+}
+.section-title.title-right::before {
+    left: unset;
+    right: 0;
+}
+
+.section-description {
+}
+
+.center {
+    text-align: center;
+}
