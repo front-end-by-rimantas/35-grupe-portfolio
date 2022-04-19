@@ -1,0 +1,16 @@
+.feature {
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px #0003;
+}
+.feature > i {
+}
+.feature > h3 {
+    margin: 20px 0;
+    font-size: 22px;
+}
+.feature > p {
+}
