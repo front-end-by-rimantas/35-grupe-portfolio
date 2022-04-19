@@ -10,9 +10,10 @@
     font-size: 40px;
     color: red;
 }
-.feature > h3 {
+.feature > .title {
+    display: block;
     margin: 20px 0;
     font-size: 22px;
 }
-.feature > p {
+.feature > .description {
 }
