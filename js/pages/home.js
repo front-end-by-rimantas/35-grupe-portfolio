@@ -1,5 +1,8 @@
 // component imports
 
+import { renderFeatures } from '../components/features/features.js';
+import { featuresData } from '../data/featuresData.js';
+
 // components execution
 
 /* header: start */
@@ -9,6 +12,7 @@
 /* hero: end */
 
 /* premium features: start */
+renderFeatures('#features_block', featuresData);
 /* premium features: end */
 
 /* comunication app: start */
