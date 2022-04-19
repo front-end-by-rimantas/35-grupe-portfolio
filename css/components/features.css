@@ -7,6 +7,8 @@
     box-shadow: 0 4px 20px #0003;
 }
 .feature > i {
+    font-size: 40px;
+    color: red;
 }
 .feature > h3 {
     margin: 20px 0;
