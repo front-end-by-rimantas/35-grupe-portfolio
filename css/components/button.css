@@ -9,13 +9,31 @@
     color: var(--primary-color-anti);
     border: none;
     border-radius: 0.3em;
+    box-shadow: 0px 4px 10px #0003;
 }
-.btn.btn-big {
-    font-size: 30px;
+.btn:hover {
+    box-shadow: 0px 4px 10px #0005;
 }
-.btn.btn-xl {
-    font-size: 60px;
+
+.btn.btn-white {
+    background-color: #fff;
+    color: #555;
 }
+.btn.btn-white:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-anti);
+}
+
 .btn.btn-sm {
     font-size: 12px;
+}
+.btn.btn-xl {
+    font-size: 30px;
+}
+.btn.btn-xxl {
+    font-size: 60px;
+}
+
+.btn.btn-round {
+    border-radius: 1.35em;
 }
