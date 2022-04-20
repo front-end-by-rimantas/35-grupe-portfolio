@@ -12,7 +12,52 @@ import { featuresData } from '../data/featuresData.js';
 /* hero: end */
 
 /* premium features: start */
-renderFeatures('#features_block', featuresData);
+
+// const [featureErr, featureContent] = renderFeatures(548562, featuresData);
+// const [featureErr, featureContent] = renderFeatures('', featuresData);
+// const [featureErr, featureContent] = renderFeatures('asd', featuresData);
+// const [featureErr, featureContent] = renderFeatures('header', featuresData);
+// const [featureErr, featureContent] = renderFeatures('#features_block', 15485);
+// const [featureErr, featureContent] = renderFeatures('#features_block', null);
+// const [featureErr, featureContent] = renderFeatures('#features_block', {});
+// const [featureErr, featureContent] = renderFeatures('#features_block', []);
+// const [featureErr, featureContent] = renderFeatures('#features_block', [1, 2, 3]);
+// const [featureErr, featureContent] = renderFeatures('#features_block', [null, [], {}]);
+// const [featureErr, featureContent] = renderFeatures('#features_block', [
+//     {},
+//     { a: 1 },
+//     { b: 'b', c: true },
+//     { b: 'b', c: true, d: false },
+//     { b: 'b', c: true, d: false, e: [] },
+//     { b: 'b', c: true, d: false, e: [], f: {} },
+// ]);
+// const [featureErr, featureContent] = renderFeatures('#features_block', [
+//     {
+//         a: true,
+//         title: 'Title',
+//     },
+//     {
+//         title: 'Title',
+//         desc: 'Description',
+//     },
+//     {
+//         title: 'Title hack',
+//         desc: 'Description hack',
+//         hackMe: 'please',
+//     },
+//     {
+//         icon: 'globe',
+//         title: 'Title hack',
+//         desc: 'Description hack',
+//         hackMe: 'please',
+//     },
+// ]);
+const [featureErr, featureContent] = renderFeatures('#features_block', featuresData);
+
+if (featureErr) {
+    console.error(featureContent);
+}
+
 /* premium features: end */
 
 /* comunication app: start */

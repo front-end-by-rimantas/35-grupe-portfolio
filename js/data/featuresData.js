@@ -5,7 +5,7 @@ const featuresData = [
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat unde deleniti.',
     },
     {
-        icon: 'globe',
+        // icon: 'globe',
         title: 'Live Chat',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat unde deleniti.',
     },
