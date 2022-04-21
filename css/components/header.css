@@ -1,0 +1,20 @@
+.main-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.main-header .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header nav {
+    display: flex;
+    gap: 20px;
+}
+.main-header nav > a {
+    color: #fff;
+}

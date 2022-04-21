@@ -9,6 +9,7 @@
 @import '../components/button.css';
 @import '../components/features.css';
 @import '../components/form.css';
+@import '../components/header.css';
 
 /* CUSTOM STYLE GOES BELOW THIS COMMENT LINE */
 
@@ -16,6 +17,11 @@
 /* header: end */
 
 /* hero: start */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
 /* hero: end */
 
 /* premium features: start */
