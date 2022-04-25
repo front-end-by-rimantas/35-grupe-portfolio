@@ -7,16 +7,17 @@ import { featuresData } from '../data/featuresData.js';
 
 /* header: start */
 
-const mainHeaderDOM = document.querySelector('.main-header');
-
-addEventListener('scroll', function () {
+function scrollFunc() {
     const headerPosition = 100;
     if (scrollY > headerPosition) {
         mainHeaderDOM.classList.add('header-white');
     } else {
         mainHeaderDOM.classList.remove('header-white');
     }
-})
+}
+const mainHeaderDOM = document.querySelector('.main-header');
+addEventListener('scroll', scrollFunc);
+scrollFunc();
 
 /* header: end */
 
