@@ -1,7 +1,11 @@
+.features-list.row {
+    display: grid;
+    gap: 30px;
+    /* align-items: start; */
+}
+
 .feature {
     padding: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     text-align: center;
     border-radius: 20px;
     box-shadow: 0 4px 20px #0003;
@@ -16,4 +20,16 @@
     font-size: 22px;
 }
 .feature > .description {
+}
+
+@media (min-width: 767px) {
+    .features-list.row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 991px) {
+    .features-list.row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

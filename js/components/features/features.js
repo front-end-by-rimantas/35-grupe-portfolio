@@ -88,7 +88,7 @@ function renderFeatures(selector, data) {
         }
 
         HTML += `
-            <div class="col-12 col-md-6 col-lg-4 feature">
+            <div class="feature">
                 <i class="fa fa-${item.icon ? item.icon : 'globe'}" aria-hidden="true"></i>
                 <h3 class="title">${item.title}</h3>
                 <p class="description">${item.desc}</p>

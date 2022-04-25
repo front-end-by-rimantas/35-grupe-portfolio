@@ -2,7 +2,7 @@ const featuresData = [
     {
         icon: 'bath',
         title: 'Fully functional',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat unde deleniti.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
         // icon: 'globe',
@@ -12,7 +12,7 @@ const featuresData = [
     {
         icon: 'car',
         title: 'Secure Data',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat unde deleniti.',
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
         icon: 'user',
