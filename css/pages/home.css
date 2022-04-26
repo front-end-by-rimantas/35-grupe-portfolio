@@ -7,6 +7,7 @@
 
 /* components */
 @import '../components/button.css';
+@import '../components/carousel.css';
 @import '../components/features.css';
 @import '../components/form.css';
 @import '../components/header.css';
