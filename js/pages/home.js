@@ -1,7 +1,11 @@
 // component imports
 
+import { Carousel } from '../components/carousel/Carousel.js';
+import { InterfaceCard } from '../components/carousel/Interface.js';
+import { TestimonialCard } from '../components/carousel/Testimonial.js';
 import { renderFeatures } from '../components/features/features.js';
 import { featuresData } from '../data/featuresData.js';
+import { interfaceData } from '../data/interfaceData.js';
 
 // components execution
 
@@ -83,6 +87,19 @@ if (featureErr) {
 /* how app works: end */
 
 /* interface slide: start */
+
+const interfaceCarousel = new Carousel('#interface_carousel', InterfaceCard, interfaceData, {
+    size: {
+        mobile: 1,
+        tablet: 1,
+        desktop: 1,
+    },
+    previousNext: true,
+    dots: true,
+});
+
+console.log(interfaceCarousel);
+
 /* interface slide: end */
 
 /* testimonials: start */
