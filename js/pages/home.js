@@ -88,7 +88,7 @@ if (featureErr) {
 
 /* interface slide: start */
 
-const interfaceCarousel = new Carousel('#interface_carousel', InterfaceCard, interfaceData, {
+new Carousel('#interface_carousel', InterfaceCard, interfaceData, {
     size: {
         mobile: 1,
         tablet: 1,
@@ -97,8 +97,6 @@ const interfaceCarousel = new Carousel('#interface_carousel', InterfaceCard, int
     previousNext: true,
     dots: true,
 });
-
-console.log(interfaceCarousel);
 
 /* interface slide: end */
 
