@@ -107,11 +107,11 @@ class Carousel {
             ...this.data.list.slice(0, copyCount),
         ];
 
-        console.log(this);
-
         for (const item of list) {
             const card = new this.cardClass(this.data.srcFolder, item);
-            HTML += `<div class="item">${card.render()}</div>`;
+            if (card.isValidData() && card.isValidFolder()) {
+                HTML += `<div class="item">${card.render()}</div>`;
+            }
         }
 
         const width = list.length / this.size.desktop * 100;
