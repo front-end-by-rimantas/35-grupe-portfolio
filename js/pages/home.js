@@ -4,6 +4,7 @@ import { Carousel } from '../components/carousel/Carousel.js';
 import { InterfaceCard } from '../components/carousel/Interface.js';
 import { TestimonialCard } from '../components/carousel/Testimonial.js';
 import { renderFeatures } from '../components/features/features.js';
+import { heroForm } from '../components/hero-form/heroForm.js';
 import { featuresData } from '../data/featuresData.js';
 import { interfaceData } from '../data/interfaceData.js';
 
@@ -26,6 +27,9 @@ scrollFunc();
 /* header: end */
 
 /* hero: start */
+
+heroForm();
+
 /* hero: end */
 
 /* premium features: start */

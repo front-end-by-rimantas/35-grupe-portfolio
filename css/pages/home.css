@@ -23,6 +23,14 @@
     align-items: center;
     min-height: 100vh;
 }
+.hero .hero-form {
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #333;
+}
 /* hero: end */
 
 /* premium features: start */

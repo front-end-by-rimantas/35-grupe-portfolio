@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form > label {
+    display: none;
+}
+.form > input {
+    padding: 0.2em 1em;
+    font-size: 20px;
+}
