@@ -36,10 +36,15 @@ class Carousel {
     }
 
     isValidSelector() {
-        return true;
+        return typeof this.selector === 'string' && this.selector !== '';
     }
 
     isValidData() {
+        if (!this.isObject(this.data)
+            || !Array.isArray(this.data.list)
+            || this.data.list.length === 0) {
+            return false;
+        }
         return true;
     }
 
@@ -87,16 +92,34 @@ class Carousel {
     }
 
     listHTML() {
+        let HTML = '';
+        let copyCount = 0;
+
+        for (const key in this.size) {
+            if (copyCount < this.size[key]) {
+                copyCount = this.size[key];
+            }
+        }
+
+        const list = [
+            ...this.data.list.slice(-copyCount),
+            ...this.data.list,
+            ...this.data.list.slice(0, copyCount),
+        ];
+
+        console.log(list);
+
+        for (const item of list) {
+            HTML += `<div class="item">ITEM</div>`;
+        }
+
+        const width = list.length / this.size.desktop * 100;
+        const trans = 100 / list.length * this.size.desktop;
         return `<div class="list-view">
-                    <div class="list">
-                        <div class="item">3</div>
-                        <div class="item">4</div>
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                        <div class="item">4</div>
-                        <div class="item">1</div>
-                        <div class="item">2</div>
+                    <div class="list" 
+                         style="transform: translateX(-${trans}%);
+                                width: ${width}%;">
+                        ${HTML}
                     </div>
                 </div>`;
     }

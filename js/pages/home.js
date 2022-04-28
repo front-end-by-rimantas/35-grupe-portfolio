@@ -95,8 +95,8 @@ if (featureErr) {
 new Carousel('#interface_carousel', InterfaceCard, interfaceData, {
     size: {
         mobile: 1,
-        tablet: 1,
-        desktop: 1,
+        tablet: 2,
+        desktop: 3,
     },
     previousNext: true,
     dots: true,
