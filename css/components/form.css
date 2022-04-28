@@ -4,9 +4,17 @@
     gap: 20px;
 }
 .form > label {
-    display: none;
+    font-size: 0;
 }
-.form > input {
+.form > input,
+.form > textarea {
+    width: 100%;
     padding: 0.2em 1em;
     font-size: 20px;
+    line-height: 1.1em;
+}
+.form > textarea {
+    min-height: 4em;
+    max-height: 12em;
+    resize: vertical;
 }
