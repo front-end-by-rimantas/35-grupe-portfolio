@@ -14,6 +14,9 @@ class Carousel {
         this.previousNext = true;
         this.dots = true;
 
+        this.currentlyVisibleIndex = 0;
+        this.listSize = 0;
+
         this.init();
     }
 
@@ -33,6 +36,7 @@ class Carousel {
         this.updateDefaultSettings();
 
         this.render();
+        this.action();
     }
 
     isValidSelector() {
@@ -114,8 +118,11 @@ class Carousel {
             }
         }
 
-        const width = list.length / this.size.desktop * 100;
-        const trans = 100 / list.length * this.size.desktop;
+        this.listSize = list.length;
+        this.currentlyVisibleIndex = this.size.desktop;
+        const width = this.listSize / this.size.desktop * 100;
+        const trans = 100 / this.listSize * this.currentlyVisibleIndex;
+
         return `<div class="list-view">
                     <div class="list" 
                          style="transform: translateX(-${trans}%);
@@ -158,6 +165,24 @@ class Carousel {
     render() {
         const HTML = this.listHTML() + this.actionsHTML();
         this.carouselDOM.innerHTML = HTML;
+    }
+
+    action() {
+        const listDOM = this.carouselDOM.querySelector('.list');
+        const nextDOM = this.carouselDOM.querySelector('.fa-angle-right');
+        const previousDOM = this.carouselDOM.querySelector('.fa-angle-left');
+
+        nextDOM.addEventListener('click', () => {
+            this.currentlyVisibleIndex++;
+            const trans = 100 / this.listSize * this.currentlyVisibleIndex;
+            console.log(this.currentlyVisibleIndex, trans + '%');
+        });
+
+        previousDOM.addEventListener('click', () => {
+            this.currentlyVisibleIndex--;
+            const trans = 100 / this.listSize * this.currentlyVisibleIndex;
+            console.log(this.currentlyVisibleIndex, trans + '%');
+        });
     }
 }
 
