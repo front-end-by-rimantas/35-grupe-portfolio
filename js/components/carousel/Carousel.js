@@ -15,6 +15,7 @@ class Carousel {
         this.dots = true;
 
         this.currentlyVisibleIndex = 0;
+        this.originalListSize = this.data.list.length;
         this.listSize = 0;
         this.copyCount = 0;
         this.animationInAction = false;
@@ -49,7 +50,7 @@ class Carousel {
     isValidData() {
         if (!this.isObject(this.data)
             || !Array.isArray(this.data.list)
-            || this.data.list.length === 0) {
+            || this.originalListSize === 0) {
             return false;
         }
         return true;
@@ -107,6 +108,8 @@ class Carousel {
             }
         }
 
+        this.originalListSize = this.data.list.length;
+
         const list = [
             ...this.data.list.slice(-this.copyCount),
             ...this.data.list,
@@ -151,9 +154,7 @@ class Carousel {
         if (this.dots) {
             dotsHTML = `<div class="dots">
                             <i class="dot active"></i>
-                            <i class="dot"></i>
-                            <i class="dot"></i>
-                            <i class="dot"></i>
+                            ${'<i class="dot"></i>'.repeat(this.originalListSize - 1)}
                         </div>`;
         }
 
@@ -181,7 +182,7 @@ class Carousel {
                 listDOM.style.transform = `translateX(${trans}%)`;
 
                 // teleportas i prieki
-                if (this.currentlyVisibleIndex === this.data.list.length + this.copyCount) {
+                if (this.currentlyVisibleIndex === this.originalListSize + this.copyCount) {
                     setTimeout(() => {
                         listDOM.style.transition = 'all 0s';
                         this.currentlyVisibleIndex = this.copyCount;
