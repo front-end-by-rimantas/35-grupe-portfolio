@@ -92,15 +92,20 @@ if (featureErr) {
 
 /* interface slide: start */
 
-new Carousel('#interface_carousel', InterfaceCard, interfaceData, {
-    size: {
-        mobile: 2,
-        tablet: 3,
-        desktop: 4,
-    },
-    previousNext: true,
-    dots: true,
-});
+new Carousel(
+    '#interface_carousel',
+    InterfaceCard,
+    interfaceData,
+    {
+        size: {
+            mobile: 2,
+            tablet: 3,
+            desktop: 4,
+        },
+        previousNext: true,
+        dots: true,
+    }
+);
 
 /* interface slide: end */
 

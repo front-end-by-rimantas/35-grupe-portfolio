@@ -118,6 +118,7 @@ class Carousel {
 
         for (const item of list) {
             const card = new this.cardClass(this.data.srcFolder, item);
+
             if (card.isValidData() && card.isValidFolder()) {
                 HTML += `<div class="item">${card.render()}</div>`;
             }
