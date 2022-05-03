@@ -5,6 +5,7 @@ import { InterfaceCard } from '../components/carousel/Interface.js';
 import { TestimonialCard } from '../components/carousel/Testimonial.js';
 import { renderFeatures } from '../components/features/features.js';
 import { heroForm } from '../components/hero-form/heroForm.js';
+import { IsValid } from '../components/IsValid.js';
 import { featuresData } from '../data/featuresData.js';
 import { interfaceData } from '../data/interfaceData.js';
 
@@ -132,3 +133,18 @@ new Carousel(
 
 /* footer: start */
 /* footer: end */
+
+console.log(IsValid.emptyString(''));
+console.log(IsValid.emptyString('asd'));
+console.log(IsValid.emptyString(4151));
+console.log(IsValid.emptyString([]));
+console.log(IsValid.emptyString(null));
+
+console.log('VARDAS');
+console.log(IsValid.firstName(null));
+console.log(IsValid.firstName(''));
+console.log(IsValid.firstName('vardenis'));
+console.log(IsValid.firstName('VArdenis'));
+console.log(IsValid.firstName('Vardenis2'));
+console.log(IsValid.firstName('Va3rdenis4'));
+console.log(IsValid.firstName('Vardenis'));

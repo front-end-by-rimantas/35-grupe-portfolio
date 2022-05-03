@@ -1,22 +1,4 @@
-function isValidSelector(selector) {
-    if (typeof selector !== 'string') {
-        return [true, 'Selector turi buti stringas'];
-    }
-    if (selector === '') {
-        return [true, 'Selector turi buti ne tuscias stringas'];
-    }
-    return [false, 'OK'];
-}
-
-function isValidData(data) {
-    if (!Array.isArray(data)) {
-        return [true, 'Duomenys turi buti masyve'];
-    }
-    if (data.length === 0) {
-        return [true, 'Duomenyse turi buti bent vienas objektas'];
-    }
-    return [false, 'OK'];
-}
+import { IsValid } from "../IsValid.js";
 
 function isValidDataItem(item) {
     const mandatoryObjKeys = ['title', 'desc'];
@@ -65,7 +47,7 @@ function isValidDataItem(item) {
 }
 
 function renderFeatures(selector, data) {
-    const selectorRes = isValidSelector(selector);
+    const selectorRes = IsValid.emptyString(selector);
     if (selectorRes[0]) {
         return selectorRes;
     }
@@ -75,7 +57,7 @@ function renderFeatures(selector, data) {
         return [true, 'Pagal pateikta selector nepavyko rasti elemento'];
     }
 
-    const dataRes = isValidData(data);
+    const dataRes = IsValid.emptyArray(data);
     if (dataRes[0]) {
         return dataRes;
     }
